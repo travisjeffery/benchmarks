@@ -22,6 +22,7 @@ end
 
 {:f1 => :"+=", :f2 => :<<, :f3 => :join}.each do |t|
   time = Time.now
+  # lots of chunky bacon
   method(t.first).call ["chunky", "bacon"] * 10_000
   puts "%-6s %s" % [t.last, Time.now - time]
 end
